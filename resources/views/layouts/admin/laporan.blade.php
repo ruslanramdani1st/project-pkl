@@ -11,7 +11,7 @@ ADMIN | UINSGD
 @section('contentAdmin')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-15">
+        <div class="col-md-12">
             <div class="card">
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -34,14 +34,14 @@ ADMIN | UINSGD
                                 {{$no++}}
                             </td>
                             <td>
-                                {{$data->user->nip}}
+                                {{$data->users->nip}}
                             </td>
                             <td>
-                                {{$data->user->name}}
+                                {{$data->users->name}}
                             </td>
                             <td>
                                 <center>
-                                    {{$data->user->golongan}}
+                                    {{$data->users->golongan}}
                                 </center>
                             </td>
                             <td>

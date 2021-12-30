@@ -15,7 +15,7 @@ class Pengguna extends Model
     public $table = 'penggunas';
 
     protected $fillable = [
-        'id_user',
+        'user_id',
         'date',
         'jamDatang',
         'jamPulang',
@@ -26,12 +26,12 @@ class Pengguna extends Model
 
     public function users()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function kegiatan()
     {
-        return $this->belongsTo(Kegiatan::class);
+        return $this->belongsTo(Kegiatan::class, 'kegiatan_id');
     }
 
     public function uraians()

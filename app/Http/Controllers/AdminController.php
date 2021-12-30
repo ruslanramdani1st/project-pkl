@@ -26,9 +26,10 @@ class AdminController extends Controller
 
     public function laporan()
     {
-        $pengguna = Pengguna::all();
+        $pengguna = Pengguna::with('users')->get();
         $kegiatan = Kegiatan::all();
         $laporan = DB::table('users')->where('role', 'Account User')->get();
+        // return $pengguna;
         return view('layouts.admin.laporan', compact('pengguna','kegiatan','laporan'));
     }
 }
