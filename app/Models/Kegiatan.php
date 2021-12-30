@@ -17,6 +17,6 @@ class Kegiatan extends Model
 
     public function pengguna()
     {
-        return $this->hasMany(Pengguna::class);
+        return $this->hasMany(Pengguna::class, 'kegiatan_id');
     }
 }
