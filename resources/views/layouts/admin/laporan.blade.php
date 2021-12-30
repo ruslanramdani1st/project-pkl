@@ -30,18 +30,18 @@ ADMIN | UINSGD
                         @php $no = 1; @endphp
                         @foreach($pengguna as $data)
                         <tr scope="row">
-                            <td >
+                            <td>
                                 {{$no++}}
                             </td>
                             <td>
-                                {{-- {{$data->laporan->nip}} --}}
+                                {{$data->user->nip}}
                             </td>
                             <td>
-                                {{-- {{$data->laporan->name}} --}}
+                                {{$data->user->name}}
                             </td>
                             <td>
                                 <center>
-                                    {{-- {{$data->laporan->golongan}} --}}
+                                    {{$data->user->golongan}}
                                 </center>
                             </td>
                             <td>
